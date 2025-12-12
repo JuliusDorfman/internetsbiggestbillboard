@@ -5,6 +5,11 @@ const videos: Record<string, { id: string; start?: number }> = {
   'another-song': { id: 'dQw4w9WgXcQ', start: 0 },
 };
 
+// This tells Next.js which pages to generate at build time
+export function generateStaticParams() {
+  return Object.keys(videos).map((slug) => ({ slug }));
+}
+
 export default async function VideoPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const video = videos[slug];
