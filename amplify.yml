@@ -3,6 +3,7 @@ frontend:
   phases:
     preBuild:
       commands:
+        - nvm install 20
         - nvm use 20
         - npm ci
     build:
@@ -16,3 +17,8 @@ frontend:
     paths:
       - node_modules/**/*
       - .next/cache/**/*
+customHeaders: []
+customRules:
+  - source: "/<*>"
+    target: "/index.html"
+    status: "404"
