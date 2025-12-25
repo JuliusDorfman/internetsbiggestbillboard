@@ -27,7 +27,7 @@ export default function VideoPlayer({ videoId, start = 0 }: VideoPlayerProps) {
       >
         <div style={{ color: '#fff', fontSize: '24px', textAlign: 'center' }}>
           <div style={{ fontSize: '64px', marginBottom: '16px' }}>▶</div>
-          <div>Tap to play</div>
+          <div>Tap to Pay!</div>
         </div>
       </div>
     );
