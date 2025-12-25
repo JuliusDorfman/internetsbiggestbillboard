@@ -17,3 +17,8 @@ frontend:
     paths:
       - node_modules/**/*
       - .next/cache/**/*
+customHeaders: []
+customRules:
+  - source: "/<*>"
+    target: "/index.html"
+    status: "404"
